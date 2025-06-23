@@ -157,17 +157,17 @@ int8_t WiFiEspClass::scanNetworks()
 
 char* WiFiEspClass::SSID(uint8_t networkItem)
 {
-	return EspDrv::getSSIDNetoworks(networkItem);
+	return EspDrv::getSSIDNetwork(networkItem);
 }
 
 int32_t WiFiEspClass::RSSI(uint8_t networkItem)
 {
-	return EspDrv::getRSSINetoworks(networkItem);
+	return EspDrv::getRSSINetwork(networkItem);
 }
 
 uint8_t WiFiEspClass::encryptionType(uint8_t networkItem)
 {
-    return EspDrv::getEncTypeNetowrks(networkItem);
+    return EspDrv::getEncryptionTypeNetwork(networkItem);
 }
 
 

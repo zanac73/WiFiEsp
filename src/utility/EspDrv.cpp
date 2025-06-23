@@ -532,7 +532,7 @@ bool EspDrv::getGateway(IPAddress& gw)
 	return false;
 }
 
-char* EspDrv::getSSIDNetoworks(uint8_t networkItem)
+char* EspDrv::getSSIDNetworks(uint8_t networkItem)
 {
 	if (networkItem >= WL_NETWORKS_LIST_MAXNUM)
 		return NULL;
@@ -540,7 +540,7 @@ char* EspDrv::getSSIDNetoworks(uint8_t networkItem)
 	return _networkSsid[networkItem];
 }
 
-uint8_t EspDrv::getEncTypeNetowrks(uint8_t networkItem)
+uint8_t EspDrv::getEncTypeNetworks(uint8_t networkItem)
 {
 	if (networkItem >= WL_NETWORKS_LIST_MAXNUM)
 		return 0;
@@ -548,7 +548,7 @@ uint8_t EspDrv::getEncTypeNetowrks(uint8_t networkItem)
     return _networkEncr[networkItem];
 }
 
-int32_t EspDrv::getRSSINetoworks(uint8_t networkItem)
+int32_t EspDrv::getRSSINetworks(uint8_t networkItem)
 {
 	if (networkItem >= WL_NETWORKS_LIST_MAXNUM)
 		return 0;
