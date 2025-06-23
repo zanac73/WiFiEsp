@@ -23,7 +23,7 @@ along with The Arduino WiFiEsp library.  If not, see
 class RingBuffer
 {
 public:
-	RingBuffer(unsigned int size);
+	explicit RingBuffer(unsigned int size);
 	~RingBuffer();
 
 	void reset();

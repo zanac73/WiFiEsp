@@ -30,8 +30,7 @@ class WiFiEspServer : public Server
 {
 
 public:
-	WiFiEspServer(uint16_t port);
-
+	explicit WiFiEspServer(uint16_t port);
 
 	/*
 	* Gets a client that is connected to the server and has data available for reading.

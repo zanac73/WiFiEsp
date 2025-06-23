@@ -29,7 +29,7 @@ class WiFiEspClient : public Client
 {
 public:
   WiFiEspClient();
-  WiFiEspClient(uint8_t sock);
+  explicit WiFiEspClient(uint8_t sock);
   
   
   // override Print.print method
