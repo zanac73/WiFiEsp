@@ -20,12 +20,10 @@ along with The Arduino WiFiEsp library.  If not, see
 #define WiFiEspClient_h
 
 
-#include "Arduino.h"
-#include "Print.h"
-#include "Client.h"
-#include "IPAddress.h"
-
-
+#include <Arduino.h>
+#include <Print.h>
+#include <Client.h>
+#include <IPAddress.h>
 
 class WiFiEspClient : public Client
 {
