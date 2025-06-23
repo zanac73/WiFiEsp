@@ -167,7 +167,7 @@ int32_t WiFiEspClass::RSSI(uint8_t networkItem)
 
 uint8_t WiFiEspClass::encryptionType(uint8_t networkItem)
 {
-    return EspDrv::getEncryptionTypeNetwork(networkItem);
+	return EspDrv::getEncTypeNetwork(networkItem);
 }
 
 

@@ -36,11 +36,10 @@ public:
 
 
 private:
-
 	unsigned int _size;
-	char* ringBuf;
-	char* ringBufEnd;
-	char* ringBufP;
+	char* _ringBuf;
+	char* _ringBufEnd;
+	char* _ringBufP;
 
 };
 

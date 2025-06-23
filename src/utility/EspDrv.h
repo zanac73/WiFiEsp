@@ -19,9 +19,8 @@ along with The Arduino WiFiEsp library.  If not, see
 #ifndef EspDrv_h
 #define EspDrv_h
 
-#include "Stream.h"
-#include "IPAddress.h"
-
+#include <Stream.h>
+#include <IPAddress.h>
 
 #include "RingBuffer.h"
 
@@ -231,25 +230,25 @@ public:
 	 *
      * return: ssid string of the specified item on the networks scanned list
      */
-    static char* getSSIDNetworks(uint8_t networkItem);
+    static char* getSSIDNetwork(uint8_t networkItem);
 
     /*
-     * Return the RSSI of the networks discovered during the scanNetworks
+     * Return the RSSI of the network discovered during the scanNetworks
      *
      * param networkItem: specify from which network item want to get the information
 	 *
      * return: signed value of RSSI of the specified item on the networks scanned list
      */
-    static int32_t getRSSINetworks(uint8_t networkItem);
+    static int32_t getRSSINetwork(uint8_t networkItem);
 
     /*
-     * Return the encryption type of the networks discovered during the scanNetworks
+     * Return the encryption type of the network discovered during the scanNetworks
      *
      * param networkItem: specify from which network item want to get the information
 	 *
      * return: encryption type (enum wl_enc_type) of the specified item on the networks scanned list
      */
-    static uint8_t getEncTypeNetworks(uint8_t networkItem);
+    static uint8_t getEncTypeNetwork(uint8_t networkItem);
 
 
     /*
@@ -286,7 +285,7 @@ public:
 ////////////////////////////////////////////////////////////////////////////////
 
 private:
-	static Stream *espSerial;
+	static Stream *_espSerial;
 
 	static long _bufPos;
 	static uint8_t _connId;
@@ -296,7 +295,7 @@ private:
 
 
 	// firmware version string
-	static char 	fwVersion[WL_FW_VER_LENGTH];
+	static char 	_fwVersion[WL_FW_VER_LENGTH];
 
 	// settings of requested network
 	static char 	_networkSsid[WL_NETWORKS_LIST_MAXNUM][WL_SSID_MAX_LENGTH];
@@ -312,7 +311,7 @@ private:
 
 
 	// the ring buffer is used to search the tags in the stream
-	static RingBuffer ringBuf;
+	static RingBuffer _ringBuf;
 
 
 	//static int sendCmd(const char* cmd, int timeout=1000);
