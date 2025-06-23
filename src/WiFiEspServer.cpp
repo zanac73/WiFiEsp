@@ -26,6 +26,8 @@ along with The Arduino WiFiEsp library.  If not, see
 WiFiEspServer::WiFiEspServer(uint16_t port)
 {
 	_port = port;
+	_sock = SOCK_NOT_AVAIL;
+	_started = false;
 }
 
 void WiFiEspServer::begin()
