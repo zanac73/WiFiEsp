@@ -820,7 +820,7 @@ bool EspDrv::sendData(uint8_t sock, const uint8_t *data, uint16_t len)
     return true;
 }
 
-// Overrided sendData method for __FlashStringHelper strings
+// Overriden sendData method for __FlashStringHelper strings
 bool EspDrv::sendData(uint8_t sock, const __FlashStringHelper *data, uint16_t len, bool appendCrLf)
 {
 	LOGDEBUG2(F("> sendData:"), sock, len);
